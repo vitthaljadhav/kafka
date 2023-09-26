@@ -1,0 +1,69 @@
+
+
+Apache Kafka :
+Apache Kafka is like  communication System that help different parts of computer system exchnage data by publishing and subscribing a topic.
+
+Why we need a kafka :
+1) High Throughput
+
+2)Fault tolerance.
+
+3)Durable
+
+4)Scalable
+
+
+
+Installation:-
+-----------------
+
+1)Download kafka zip file from offical website and extract file
+
+Link download Apache Kakfka :
+
+https://www.apache.org/dyn/closer.cgi?path=/kafka/3.5.0/kafka_2.13-3.5.0.tgz
+
+2) start zookeeper
+
+cmd> bin\windows\zookeeper-server-start.bat config\zookeeper.properties OR 
+zookeeper-server-start.bat ../../config/zookeeper.properties
+
+
+3)start Kafka server 
+cmd>bin\windows\kafka-server-start.bat config\server.properties OR
+kafka-server-start.bat ../../config/server.properties
+
+
+
+Let us use kafka with console :
+==============================
+
+1)create new topic with kafka-topics
+2)Produce example message with kafka-console-producer
+3)consume the message with kafka-console-consumer
+
+
+
+4)create a topic
+=>     bin\windows\kafka-topics.bat --create --topic topic_name --bootstrap-server localhost:9092
+cmd>bin\windows\kafka-topics.bat  --create --topic user-topic --bootstrap-server localhost:9092
+
+
+5)publish message to Topic 
+==>  bin\windows\kafka-console-producer.bat --topic topic_name  --bootstrap-server localhost:9092
+
+cmd> bin\windows\kafka-console-producer.bat --topic user-topic  --bootstrap-server localhost:9092
+
+> write a messgae
+>hi anil 
+
+6)consume message from topic
+==> bin\windows\kafka-console-consumer.bat --topic topic-name --from-beginning --bootstrap-server localhost:9092
+
+cmd>bin\windows\kafka-console-consumer.bat --topic user-topic --from-beginning --bootstrap-server localhost:9092
+> write a messgae
+>hi anil 
+
+
+
+localhost:8787/location/update
